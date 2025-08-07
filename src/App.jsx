@@ -42,6 +42,13 @@ function App() {
     });
   };
 
+  const handleModalClick = (e) => {
+    // Close modal when clicking on the modal overlay (outside the content)
+    if (e.target.className === "modal") {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <div
       style={{
@@ -54,7 +61,7 @@ function App() {
       <h1>User Details Modal</h1>
       <button onClick={() => setIsOpen(true)}>Open Form</button>
       {isOpen && (
-        <div className="modal">
+        <div className="modal" onClick={handleModalClick}>
           <div className="modal-content">
             <h2>Fill Details</h2>
             <form onSubmit={handleSubmit}>
