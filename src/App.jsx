@@ -64,13 +64,14 @@ function App() {
                 className="inputField"
                 type="text"
                 name="username"
+                id="username"
               />
               <p>Email Address:</p>
-              <input required type="email" name="email" />
+              <input required type="email" id="email" name="email" />
               <p>Phone Number:</p>
-              <input required type="number" name="phone" />
+              <input required type="number" id="phone" name="phone" />
               <p>Date of Birth:</p>
-              <input required type="date" name="dob" />
+              <input required type="date" id="dob" name="dob" />
               <button
                 className="submit-button"
                 style={{
